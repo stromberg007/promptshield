@@ -31,15 +31,22 @@
 
 ---
 
-## 🚀 Quick Start (Local & Docker)
+## 🚀 Quick Start (Launch & Run Locally)
+
+### 🌐 Direct Local Links (When Servers are Running)
+- **Scanner Web App**: [http://localhost:3001](http://localhost:3001) or [http://localhost:3000](http://localhost:3000)
+- **Interactive API Docs (Swagger)**: [http://localhost:8000/docs](http://localhost:8000/docs)
+- **Local Workspace Folder**: [promptshield](file:///Users/rakshith/Documents/promptsheild)
+
+---
 
 ### Option 1: Docker Compose (Recommended)
 
 ```bash
 docker-compose up --build
 ```
-- **Frontend Dashboard**: `http://localhost:3000`
-- **Backend API & Swagger Docs**: `http://localhost:8000/docs`
+- **Frontend Dashboard**: [http://localhost:3000](http://localhost:3000)
+- **Backend API & Swagger Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
@@ -48,19 +55,15 @@ docker-compose up --build
 #### 1. Backend (FastAPI)
 ```bash
 cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
+PYTHONPATH=. ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
 #### 2. Frontend (Next.js)
 ```bash
 cd frontend
-npm install
 npm run dev
 ```
-Navigate to `http://localhost:3000`.
+Navigate to [http://localhost:3000](http://localhost:3000) or [http://localhost:3001](http://localhost:3001).
 
 ---
 
