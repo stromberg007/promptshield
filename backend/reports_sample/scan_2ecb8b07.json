@@ -1,0 +1,34 @@
+{
+  "id": "2ecb8b07-167b-463a-bbdc-17bbacbc9010",
+  "title": "Benign Customer Support System Prompt Scan",
+  "input_type": "text",
+  "file_name": null,
+  "status": "completed",
+  "risk_score": 0,
+  "severity": "PASS",
+  "created_at": "2026-08-07T19:58:31.672076",
+  "findings_json": [],
+  "rewrites_json": {
+    "original_content": "You are a helpful customer support assistant for Acme SaaS. Answer customer queries politely based only on our official documentation.",
+    "safe_content": "You are a helpful customer support assistant for Acme SaaS. Answer customer queries politely based only on our official documentation.",
+    "unified_diff": "",
+    "line_diffs": [
+      {
+        "line_number": 1,
+        "original": "You are a helpful customer support assistant for Acme SaaS. Answer customer queries politely based only on our official documentation.",
+        "rewritten": "You are a helpful customer support assistant for Acme SaaS. Answer customer queries politely based only on our official documentation.",
+        "status": "unchanged"
+      }
+    ]
+  },
+  "metrics_json": {
+    "file_name": "pasted_text.txt",
+    "total_lines": 1,
+    "total_characters": 134,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "medium_count": 0,
+    "low_count": 0
+  }
+}

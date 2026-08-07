@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PromptShield AI Security Report - Unicode Zero-Width & Homoglyph Attack Scan</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117; color: #c9d1d9; margin: 0; padding: 40px; }
+    .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+    h1, h2, h3 { color: #f0f6fc; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-weight: bold; font-size: 14px; text-transform: uppercase; }
+    .badge-CRITICAL { background-color: #7d1a1a; color: #ff7b72; border: 1px solid #f85149; }
+    .badge-HIGH { background-color: #5a3000; color: #ffa657; border: 1px solid #d29922; }
+    .badge-MEDIUM { background-color: #3b3000; color: #e3b341; border: 1px solid #bb8009; }
+    .badge-PASS { background-color: #11381e; color: #56d364; border: 1px solid #238636; }
+    .finding { border-left: 4px solid #f85149; background-color: #21262d; padding: 12px 16px; margin-bottom: 12px; border-radius: 0 4px 4px 0; }
+    code { font-family: monospace; background-color: #0d1117; padding: 2px 6px; border-radius: 4px; color: #79c0ff; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px solid #30363d; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>PromptShield AI Security Report</h1>
+    <p><strong>Scan Title:</strong> Unicode Zero-Width & Homoglyph Attack Scan</p>
+    <p><strong>Input Type:</strong> text | <strong>Scan ID:</strong> 8d3e2ea4-203c-4522-9106-094f018428af</p>
+    <p><strong>Overall Risk Score:</strong> <span style="font-size: 24px; font-weight: bold;">60/100</span></p>
+    <p><strong>Severity:</strong> <span class="badge badge-HIGH">HIGH</span></p>
+  </div>
+
+  <div class="card">
+    <h2>Vulnerability Findings (3)</h2>
+    
+      
+        <div class="finding">
+          <h3>[HIGH] OBF-001 - Zero-Width / BiDi Unicode Control Character Injection</h3>
+          <p><strong>Category:</strong> Obfuscation | <strong>Line:</strong> 2</p>
+          <p><strong>Evidence Snippet:</strong> <code>Found 3 hidden unicode control characters</code></p>
+          <p><strong>Remediation Guidance:</strong> Strip non-printable Unicode characters (U+200B-U+200D, U+FEFF, U+202E) before processing prompt content.</p>
+        </div>
+      
+        <div class="finding">
+          <h3>[HIGH] OBF-002 - Cyrillic / Confusable Homoglyph Substitution</h3>
+          <p><strong>Category:</strong> Obfuscation | <strong>Line:</strong> 3</p>
+          <p><strong>Evidence Snippet:</strong> <code>Detected 4 visually ambiguous homoglyphs in text line</code></p>
+          <p><strong>Remediation Guidance:</strong> Normalize Unicode strings using NFKC decomposition and convert homoglyphs to standard ASCII representation.</p>
+        </div>
+      
+        <div class="finding">
+          <h3>[HIGH] CLS-001 - Semantic Instruction Override / Safety Evasion Pattern</h3>
+          <p><strong>Category:</strong> Classifier | <strong>Line:</strong> 1</p>
+          <p><strong>Evidence Snippet:</strong> <code>Adversarial semantic intent detected across keyword clusters: [ignore, rules; print, system, prompt]</code></p>
+          <p><strong>Remediation Guidance:</strong> Audit prompt semantics for indirect jailbreak intent, multi-shot roleplay tricks, or constraint evasion attempts.</p>
+        </div>
+      
+    
+  </div>
+
+  <div class="card">
+    <h2>Safe Prompt Sanitized Rewrite</h2>
+    <pre style="background: #0d1117; padding: 16px; border-radius: 6px; white-space: pre-wrap; color: #a5d6ff;">[NEUTRALIZED ADVERSARIAL INSTRUCTION: 'Adversarial semantic intent detected across keyword clusters: [ignore, rules; print, system, prompt]']
+[NEUTRALIZED ADVERSARIAL INSTRUCTION: 'Found 3 hidden unicode control characters']
+[NEUTRALIZED ADVERSARIAL INSTRUCTION: 'Detected 4 visually ambiguous homoglyphs in text line']</pre>
+  </div>
+</body>
+</html>

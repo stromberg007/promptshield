@@ -1,0 +1,22 @@
+name: PromptShield Security Scan
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  prompt-security-analysis:
+    name: Static Analysis Scanner for Prompts & AI Configs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run PromptShield AI Security Scanner
+        uses: ./action
+        with:
+          path: "."
+          fail_on_severity: "HIGH"
+          max_risk_score: "50"
