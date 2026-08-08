@@ -34,9 +34,8 @@
 ## 🚀 Quick Start (Launch & Run Locally)
 
 ### 🌐 Direct Local Links (When Servers are Running)
-- **Scanner Web App**: [http://localhost:3001](http://localhost:3001) or [http://localhost:3000](http://localhost:3000)
+- **Scanner Web App**: [http://localhost:3000](http://localhost:3000)
 - **Interactive API Docs (Swagger)**: [http://localhost:8000/docs](http://localhost:8000/docs)
-- **Local Workspace Folder**: [promptshield](file:///Users/rakshith/Documents/promptsheild)
 
 ---
 
