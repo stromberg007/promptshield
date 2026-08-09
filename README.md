@@ -65,16 +65,6 @@ npm run dev
 Navigate to [http://localhost:3000](http://localhost:3000).
 
 ---
-
-### ☁️ Cloud Deployment (1-Click Hosting)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fstromberg007%2Fpromptshield&root-directory=frontend)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/stromberg007/promptshield)
-
-For detailed deployment instructions (Vercel, Render, Railway, Google Cloud Run), see [DEPLOYMENT.md](file:///Users/rakshith/Documents/promptsheild%20/promptsheild/DEPLOYMENT.md).
-
----
-
 ## 🧪 Running Detector Unit Tests & Golden Corpus Benchmark
 
 ```bash
