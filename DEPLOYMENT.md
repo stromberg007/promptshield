@@ -4,19 +4,43 @@ This guide details how to deploy **PromptShield AI** to cloud hosting platforms.
 
 ---
 
-## 1. Deploying Frontend (Next.js) on Vercel
+## 1. Deploying Frontend (Next.js) on Vercel & Connecting to GitHub
 
-1. **Push to GitHub**:
-   Ensure your code is pushed to a remote GitHub repository.
-2. **Connect to Vercel**:
-   - Go to [Vercel Dashboard](https://vercel.com/new).
-   - Import your repository and set Root Directory to `frontend`.
-3. **Environment Variables**:
-   Add the following environment variable:
-   ```env
-   NEXT_PUBLIC_API_URL=https://your-backend-service.onrender.com/api/v1
+### Method A: Vercel Dashboard + GitHub Integration (Recommended - Push-to-Deploy)
+
+1. **Push your code to GitHub**:
+   Ensure all changes are committed and pushed to `https://github.com/stromberg007/promptshield.git`.
+2. **Import to Vercel**:
+   - Go to [Vercel New Project Dashboard](https://vercel.com/new).
+   - Select **Continue with GitHub** and import `stromberg007/promptshield`.
+   - **Framework Preset**: `Next.js`
+   - **Root Directory**: `frontend` (or leave default `./` as `vercel.json` at root is preconfigured).
+3. **Configure Environment Variables**:
+   Under **Environment Variables**, add:
+   - `NEXT_PUBLIC_API_URL`: `https://your-backend-api.onrender.com/api/v1` (or your deployed backend URL)
+4. **Deploy**:
+   Click **Deploy**. Vercel will build and deploy the application.
+5. **Connect URL to GitHub Repository**:
+   - Vercel automatically links to the GitHub repository and posts build status badges on pull requests/commits.
+   - Copy your deployed Vercel URL (e.g. `https://promptshield-frontend.vercel.app`).
+   - On GitHub (`https://github.com/stromberg007/promptshield`), click the ⚙️ **Settings icon next to About** (on the right sidebar) and paste the URL into the **Website** field.
+
+---
+
+### Method B: Vercel CLI (Command Line Deployment)
+
+1. **Install Vercel CLI & Authenticate**:
+   ```bash
+   npm i -g vercel
+   vercel login
    ```
-4. **Deploy**: Click **Deploy**. Vercel will build the Next.js static pages and API routes.
+2. **Deploy to Vercel**:
+   ```bash
+   # From the project root
+   vercel --prod
+   ```
+   Follow the prompts to link to your Vercel account and set project settings (`Root Directory`: `./frontend` or `./`).
+
 
 ---
 

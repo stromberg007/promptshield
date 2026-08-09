@@ -8,6 +8,8 @@ venv/
 env/
 ENV/
 .env
+.env*.local
+
 
 # Database & SQLite
 *.db

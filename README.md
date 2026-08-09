@@ -64,7 +64,18 @@ npm run dev
 ```
 Navigate to [http://localhost:3000](http://localhost:3000).
 
+### ☁️ Cloud Deployment & Live App Link
+
+- **Live Deployed Frontend (Vercel)**: Connect your Vercel deployment URL to GitHub (see [DEPLOYMENT.md](DEPLOYMENT.md)).
+- **1-Click Deploy to Vercel**:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fstromberg007%2Fpromptshield&root-directory=frontend)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/stromberg007/promptshield)
+
+For step-by-step instructions on deploying the Next.js app to Vercel and linking your Vercel URL to the GitHub repository, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ---
+
 ## 🧪 Running Detector Unit Tests & Golden Corpus Benchmark
 
 ```bash
